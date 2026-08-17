@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>آسر | متجر الأدوات الإلكترونية والجيمينج</title>
+<meta name="description" content="متجر آسر للأدوات الإلكترونية وإكسسوارات الجيمينج وصوابع PUBG ومبردات الهواتف.">
+<style>
+:root{--gold:#f5b51b;--bg:#070b12;--panel:#0e1522;--muted:#aab3c2;--line:#263246;--green:#18c77a}
+*{box-sizing:border-box} body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at top,#18233a 0,#070b12 42%,#05070b 100%);color:#fff}
+a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer}
+.top{background:#05070c;border-bottom:1px solid #222c3c;padding:10px 4%;display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px}
+.contact{display:flex;gap:18px;flex-wrap:wrap;color:#d9e0eb} .contact b{color:#25e887}
+header{padding:28px 5% 18px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:42px;font-weight:900;color:var(--gold);text-shadow:0 0 24px #f5b51b55} .logo small{display:block;font-size:12px;color:#d9e0eb;letter-spacing:2px;text-align:center}
+nav{background:#0b1320;border:1px solid #263246;border-radius:18px;margin:0 4% 24px;padding:12px;display:flex;gap:8px;overflow:auto}
+nav a{padding:11px 18px;border-radius:12px;white-space:nowrap} nav a:hover{background:#172237;color:var(--gold)}
+.hero{margin:0 4% 30px;border:1px solid #2b3a52;border-radius:24px;padding:42px 6%;background:linear-gradient(110deg,#101b2c,#07101c 55%,#1c1607);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:25px}
+.hero h1{font-size:clamp(34px,6vw,66px);margin:0 0 12px} .hero h1 span{color:var(--gold)} .hero p{color:#c7cfdb;font-size:18px;line-height:1.8}
+.cta{display:inline-block;background:var(--gold);color:#111;padding:14px 25px;border-radius:12px;font-weight:900;margin-top:12px}
+.hero-art{min-height:260px;border-radius:22px;border:1px solid #37465e;background:radial-gradient(circle,#24395d 0,#0b1422 60%,#070b12 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-art .cooler{width:150px;height:150px;border-radius:50%;border:15px solid #2b3444;background:radial-gradient(circle,#7c3aed,#0b1220 58%);box-shadow:0 0 50px #7c3aed88}
+.hero-art .finger{position:absolute;bottom:28px;left:20%;width:90px;height:32px;border-radius:20px;background:#111;border:2px solid #aaa;transform:rotate(-12deg)}
+.section{padding:0 4% 30px} .section-title{display:flex;align-items:center;gap:15px;margin-bottom:18px} .section-title h2{margin:0;font-size:28px} .section-title:after{content:"";height:1px;background:#27344a;flex:1}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px} .filters button{background:#101a2a;border:1px solid #2a3950;color:#dce3ee;padding:9px 15px;border-radius:10px} .filters button.active{background:var(--gold);color:#111;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,#111b2b,#0a101a);border:1px solid #27354a;border-radius:18px;overflow:hidden;transition:.2s} .card:hover{transform:translateY(-4px);border-color:#c28b17}
+.photo{height:210px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative} .photo img{width:100%;height:100%;object-fit:contain}.brand-stamp{position:absolute;top:10px;right:10px;z-index:2;background:rgba(245,181,27,.96);color:#111;padding:6px 10px;border-radius:9px;font-weight:900;font-size:12px;box-shadow:0 4px 14px #0008} .fallback{display:none;width:100%;height:100%;align-items:center;justify-content:center;background:linear-gradient(135deg,#151d2c,#080b11);color:var(--gold);font-size:25px;font-weight:900;text-align:center;padding:20px} .fallback.always{display:flex}
+.card-body{padding:16px} .tag{font-size:12px;color:var(--gold)} .card h3{margin:8px 0;font-size:20px} .card p{color:var(--muted);font-size:13px;line-height:1.6;min-height:44px}
+.buy-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:15px} .buy-row strong{font-size:21px;color:#fff} .buy-row small{font-size:12px;color:#aab3c2} .buy-row button{background:var(--gold);border:0;border-radius:10px;padding:10px 13px;font-weight:900}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px} .info-box{padding:20px;border:1px solid #27354a;border-radius:16px;background:#0b121e} .info-box h3{margin-top:0;color:var(--gold)}
+footer{margin-top:30px;border-top:1px solid #263246;padding:28px 4%;background:#05080e;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aab3c2}
+.cart{position:fixed;bottom:18px;left:18px;background:var(--green);color:#04130b;border:0;border-radius:50px;padding:14px 20px;font-weight:900;box-shadow:0 10px 30px #0008;z-index:20}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:20px} .modal.show{display:flex} .modal-box{background:#0c1420;border:1px solid #31415a;border-radius:20px;max-width:520px;width:100%;padding:22px} .modal-box h2{margin-top:0}
+.qty-controls{display:flex;align-items:center;gap:10px;margin-top:9px}
+.qty-controls button{width:30px;height:30px;border-radius:8px;border:1px solid #3a4a63;background:#172235;color:#fff;font-weight:900}
+.qty-controls span{min-width:22px;text-align:center;font-weight:900}
+.delete-btn{display:block;margin-top:8px;background:#4a1720;color:#ffb5be;border:1px solid #7a2935;border-radius:8px;padding:6px 10px;font-size:12px} .order-line{display:flex;justify-content:space-between;border-bottom:1px solid #253145;padding:10px 0} .wa{display:block;text-align:center;background:#19c978;color:#04130b;padding:14px;border-radius:12px;font-weight:900;margin-top:18px}
+@media(max-width:760px){header{padding-top:18px}.hero{grid-template-columns:1fr;padding:28px 6%}.info{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.logo{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div>⚡ منتجات جيمينج وإلكترونيات مختارة</div>
+  <div class="contact"><span>واتساب: <b>0155 355 39 37</b></span><span><b>0155 048 52 15</b></span></div>
+</div>
+
+<header>
+  <div class="logo">آسر<small>متجر الأدوات الإلكترونية والجيمينج</small></div>
+  <div>🛒 <span id="count">0</span> منتجات في السلة</div>
+</header>
+
+<nav>
+  <a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#products">المبردات</a><a href="#products">صوابع PUBG</a><a href="#payment">الدفع</a><a href="#contact">تواصل معنا</a>
+</nav>
+
+<section class="hero" id="home">
+  <div>
+    <div style="color:var(--gold);font-weight:900">ASER STORE</div>
+    <h1>ارفع مستواك في <span>الجيمينج</span></h1>
+    <p>مبردات هواتف، صوابع PUBG وتريجرات مختارة للجيمرز — بأسعار واضحة وطلب سريع عبر واتساب.</p>
+    <a class="cta" href="#products">تسوق الآن</a>
+  </div>
+  <div class="hero-art" aria-label="Gaming accessories showcase">
+    <div class="cooler"></div><div class="finger"></div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="section-title"><h2>منتجات آسر — سعر القطعة</h2></div>
+  <div class="filters">
+    <button class="active" onclick="filterProducts('all',this)">الكل</button>
+    <button onclick="filterProducts('مبردات الهواتف',this)">المبردات</button>
+    <button onclick="filterProducts('صوابع PUBG',this)">صوابع PUBG</button>
+    <button onclick="filterProducts('تريجرات PUBG',this)">التريجرات</button>
+  </div>
+  <div class="grid">
+    
+    <article class="card" data-name="memo cx07" data-cat="مبردات الهواتف">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://m.media-amazon.com/images/I/71HaMfrKXNL._AC_UF1000%2C1000_QL80_.jpg" alt="MEMO CX07" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">MEMO CX07</div></div>
+      <div class="card-body">
+        <span class="tag">مبردات الهواتف</span>
+        <h3>MEMO CX07</h3>
+        <p>مبرد 15W بتبريد شبه موصل، تركيب مغناطيسي + مشبك وRGB.</p>
+        <div class="buy-row">
+          <strong>699 <small>جنيه</small></strong>
+          <button onclick="addToCart(0)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="memo cx08" data-cat="مبردات الهواتف">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://f.nooncdn.com/p/pzsku/Z29475F47BD957D82F126Z/45/_/1781188446/52639df0-20a5-466e-9352-22f9596fde73.jpg" alt="MEMO CX08" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">MEMO CX08</div></div>
+      <div class="card-body">
+        <span class="tag">مبردات الهواتف</span>
+        <h3>MEMO CX08</h3>
+        <p>مبرد MEMO احترافي للألعاب مع تصميم مغناطيسي/مشبك.</p>
+        <div class="buy-row">
+          <strong>1,199 <small>جنيه</small></strong>
+          <button onclick="addToCart(1)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="sarafox c2 silver" data-cat="صوابع PUBG">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://cdn.salla.sa/oNQR/684b68e7-a350-4a53-9c9a-388428e612ac-1000x1000-XoxCtpBh1LutUAJt2Ac9NcisZbCVz1QU2yPJFFTX.jpg" alt="Sarafox C2 Silver" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">Sarafox C2 Silver</div></div>
+      <div class="card-body">
+        <span class="tag">صوابع PUBG</span>
+        <h3>Sarafox C2 Silver</h3>
+        <p>4 صوابع Gaming مع ألياف فضية وحافظة معدنية.</p>
+        <div class="buy-row">
+          <strong>299 <small>جنيه</small></strong>
+          <button onclick="addToCart(2)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="sarafox v10 gold silk" data-cat="صوابع PUBG">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://f.nooncdn.com/p/pzsku/Z5227975F7BF28BB786EBZ/45/1755524004/85b73926-f2c6-402e-a8dc-855f8a6d77ce.jpg?width=800" alt="Sarafox V10 Gold Silk" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">Sarafox V10 Gold Silk</div></div>
+      <div class="card-body">
+        <span class="tag">صوابع PUBG</span>
+        <h3>Sarafox V10 Gold Silk</h3>
+        <p>Gold Silk Premium، نعومة وحساسية لمس عالية — السعر المعروض للقطعة.</p>
+        <div class="buy-row">
+          <strong>535 <small>جنيه</small></strong>
+          <button onclick="addToCart(3)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="sarafox v8" data-cat="صوابع PUBG">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://www.gamesworldegypt.com/image/cache/wp/lp/Product_1/11200.webp" alt="Sarafox V8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">Sarafox V8</div></div>
+      <div class="card-body">
+        <span class="tag">صوابع PUBG</span>
+        <h3>Sarafox V8</h3>
+        <p>صوابع احترافية بألياف فضية زجاجية، 4 قطع.</p>
+        <div class="buy-row">
+          <strong>255 <small>جنيه</small></strong>
+          <button onclick="addToCart(4)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="sarafox g trigger" data-cat="تريجرات PUBG">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><div class="fallback always">Sarafox G Trigger</div></div>
+      <div class="card-body">
+        <span class="tag">تريجرات PUBG</span>
+        <h3>Sarafox G Trigger</h3>
+        <p>تريجرات للألعاب والتصويب السريع على الموبايل.</p>
+        <div class="buy-row">
+          <strong>299 <small>جنيه</small></strong>
+          <button onclick="addToCart(5)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card" data-name="memo cx06" data-cat="مبردات الهواتف">
+      <div class="photo"><span class="brand-stamp">آسر • ASER</span><img src="https://f.nooncdn.com/p/pzsku/Z7AF5B3761CA7538B71A7Z/45/1767808340/dbd3f673-b97d-45cd-9b79-fe885113940a.jpg" alt="MEMO CX06" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback">MEMO CX06</div></div>
+      <div class="card-body">
+        <span class="tag">مبردات الهواتف</span>
+        <h3>MEMO CX06</h3>
+        <p>مبرد 15W خفيف بتصميم مغناطيسي + مشبك وRGB — السعر المعروض للقطعة.</p>
+        <div class="buy-row">
+          <strong>699 <small>جنيه</small></strong>
+          <button onclick="addToCart(6)">أضف للسلة</button>
+        </div>
+      </div>
+    </article>
+    
+  </div>
+
+  <div class="info" id="payment">
+    <div class="info-box"><h3>💳 طرق الدفع</h3><p>Vodafone Cash · WE Pay · المحافظ الإلكترونية</p></div>
+    <div class="info-box"><h3>📱 اطلب على واتساب</h3><p>اختار المنتجات من المتجر واضغط «إرسال الطلب».</p></div>
+    <div class="info-box"><h3>🏆 جودة مختارة</h3><p>نركز على منتجات الجيمينج والإكسسوارات المطلوبة.</p></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div><strong style="color:var(--gold)">آسر</strong><br>متجر الأدوات الإلكترونية والجيمينج</div>
+  <div>واتساب 1: 0155 355 39 37<br>واتساب 2: 0155 048 52 15</div>
+  <div>الدفع: Vodafone Cash · WE Pay · محفظة</div>
+</footer>
+
+<button class="cart" onclick="openCart()">🛒 السلة (<span id="count2">0</span>)</button>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeCart()">
+  <div class="modal-box">
+    <h2>🛒 طلبك</h2>
+    <div id="cartLines"></div>
+    <div style="display:flex;justify-content:space-between;margin-top:15px;font-size:20px"><b>الإجمالي</b><b id="total">0 جنيه</b></div>
+    <a id="waLink" class="wa" target="_blank">إرسال الطلب على واتساب</a>
+    <button onclick="closeCart()" style="width:100%;margin-top:10px;background:#172235;color:#fff;border:1px solid #30405a;padding:12px;border-radius:12px">إغلاق</button>
+  </div>
+</div>
+
+<script>
+const products = [{"name": "MEMO CX07", "price": 699}, {"name": "MEMO CX08", "price": 1199}, {"name": "Sarafox C2 Silver", "price": 299}, {"name": "Sarafox V10 Gold Silk", "price": 215}, {"name": "Sarafox V8", "price": 255}, {"name": "Sarafox G Trigger", "price": 299}, {"name": "MEMO CX06", "price": 699}];
+let cart = [];
+
+function addToCart(i){
+  const p=products[i];
+  const existing=cart.find(x=>x.name===p.name);
+  if(existing) existing.qty++;
+  else cart.push({...p,qty:1});
+  updateCount();
+}
+function updateCount(){
+  const n=cart.reduce((s,x)=>s+x.qty,0);
+  document.getElementById('count').textContent=n;
+  document.getElementById('count2').textContent=n;
+}
+function renderCart(){
+  const box=document.getElementById('cartLines');
+  if(!cart.length){
+    box.innerHTML='<p style="color:#aab3c2">السلة فاضية. اختار منتج الأول 👌</p>';
+  } else {
+    box.innerHTML=cart.map((x,i)=>`<div class="order-line">
+      <div>
+        <div style="font-weight:900">${x.name}</div>
+        <div style="color:#aab3c2;font-size:13px;margin-top:5px">${x.price.toLocaleString()} جنيه للقطعة</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(${i},-1)">−</button>
+          <span>${x.qty}</span>
+          <button onclick="changeQty(${i},1)">+</button>
+        </div>
+      </div>
+      <div style="text-align:left">
+        <b>${(x.price*x.qty).toLocaleString()} ج</b>
+        <button class="delete-btn" onclick="removeFromCart(${i})">حذف</button>
+      </div>
+    </div>`).join('');
+  }
+  const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+  document.getElementById('total').textContent=total.toLocaleString()+' جنيه';
+  const text='طلب من متجر آسر:%0A'+cart.map(x=>`${x.name} × ${x.qty} = ${(x.price*x.qty).toLocaleString()} جنيه`).join('%0A')+'%0Aالإجمالي: '+total.toLocaleString()+' جنيه';
+  document.getElementById('waLink').href='https://wa.me/201553553937?text='+text;
+}
+function changeQty(i,delta){
+  cart[i].qty += delta;
+  if(cart[i].qty <= 0) cart.splice(i,1);
+  updateCount();
+  renderCart();
+}
+function removeFromCart(i){
+  cart.splice(i,1);
+  updateCount();
+  renderCart();
+}
+function openCart(){
+  renderCart();
+  document.getElementById('modal').classList.add('show');
+}
+function closeCart(){document.getElementById('modal').classList.remove('show')}
+function filterProducts(cat,btn){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none');
+}
+</script>
+</body>
+</html>
